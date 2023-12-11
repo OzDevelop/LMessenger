@@ -17,6 +17,7 @@
 		11F94EAD2B26F34C00AF2EC9 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EAC2B26F34C00AF2EC9 /* AuthenticationService.swift */; };
 		11F94EB12B26F68F00AF2EC9 /* LoginIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EB02B26F68F00AF2EC9 /* LoginIntroView.swift */; };
 		11F94EB32B26F6A500AF2EC9 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EB22B26F6A500AF2EC9 /* MainTabView.swift */; };
+		11F94EB52B2706D500AF2EC9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EB42B2706D500AF2EC9 /* LoginView.swift */; };
 		723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */; };
 		723ABD892AFFF1B800C260F1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD882AFFF1B800C260F1 /* AuthenticationView.swift */; };
 		723ABD8B2AFFF1B900C260F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		11F94EAC2B26F34C00AF2EC9 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		11F94EB02B26F68F00AF2EC9 /* LoginIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIntroView.swift; sourceTree = "<group>"; };
 		11F94EB22B26F6A500AF2EC9 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		11F94EB42B2706D500AF2EC9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		723ABD832AFFF1B800C260F1 /* LMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerApp.swift; sourceTree = "<group>"; };
 		723ABD882AFFF1B800C260F1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		11F94EAE2B26F66C00AF2EC9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				11F94EB42B2706D500AF2EC9 /* LoginView.swift */,
 				11F94EB02B26F68F00AF2EC9 /* LoginIntroView.swift */,
 			);
 			path = Login;
@@ -383,6 +386,7 @@
 				11F94EA82B26F18A00AF2EC9 /* AppDelegate.swift in Sources */,
 				72E4BEFC2B00B871007A1060 /* Color+Extension.swift in Sources */,
 				723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */,
+				11F94EB52B2706D500AF2EC9 /* LoginView.swift in Sources */,
 				11F94EAD2B26F34C00AF2EC9 /* AuthenticationService.swift in Sources */,
 				11F94EB32B26F6A500AF2EC9 /* MainTabView.swift in Sources */,
 			);
