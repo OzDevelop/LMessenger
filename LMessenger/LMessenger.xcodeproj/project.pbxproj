@@ -11,6 +11,7 @@
 		11F94E982B26DE1000AF2EC9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E972B26DE1000AF2EC9 /* Services.swift */; };
 		11F94E9C2B26DEE400AF2EC9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */; };
 		11F94E9E2B26E75D00AF2EC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11F94E9D2B26E75D00AF2EC9 /* GoogleService-Info.plist */; };
+		11F94EA22B26EC8C00AF2EC9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11F94EA12B26EC8C00AF2EC9 /* .gitignore */; };
 		723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */; };
 		723ABD892AFFF1B800C260F1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD882AFFF1B800C260F1 /* AuthenticationView.swift */; };
 		723ABD8B2AFFF1B900C260F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		11F94E972B26DE1000AF2EC9 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		11F94E9D2B26E75D00AF2EC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11F94EA12B26EC8C00AF2EC9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		723ABD832AFFF1B800C260F1 /* LMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerApp.swift; sourceTree = "<group>"; };
 		723ABD882AFFF1B800C260F1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		723ABD7A2AFFF1B800C260F1 = {
 			isa = PBXGroup;
 			children = (
+				11F94EA12B26EC8C00AF2EC9 /* .gitignore */,
 				723ABD852AFFF1B800C260F1 /* LMessenger */,
 				723ABD962AFFF1B900C260F1 /* LMessengerTests */,
 				723ABDA02AFFF1B900C260F1 /* LMessengerUITests */,
@@ -297,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F94EA22B26EC8C00AF2EC9 /* .gitignore in Resources */,
 				723ABDB22AFFF1F000C260F1 /* Colors.xcassets in Resources */,
 				11F94E9E2B26E75D00AF2EC9 /* GoogleService-Info.plist in Resources */,
 				723ABD8E2AFFF1B900C260F1 /* Preview Assets.xcassets in Resources */,
