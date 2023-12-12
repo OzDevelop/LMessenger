@@ -22,6 +22,9 @@
 		11F94EBA2B2712E800AF2EC9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 11F94EB92B2712E800AF2EC9 /* GoogleSignIn */; };
 		11F94EBD2B2713B400AF2EC9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EBC2B2713B400AF2EC9 /* User.swift */; };
 		11F94EBF2B2713FE00AF2EC9 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EBE2B2713FE00AF2EC9 /* ServiceError.swift */; };
+		11F94EC22B289B8400AF2EC9 /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EC12B289B8300AF2EC9 /* MainTabType.swift */; };
+		11F94EC62B289C5400AF2EC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EC52B289C5400AF2EC9 /* HomeView.swift */; };
+		11F94EC92B289C5F00AF2EC9 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94EC82B289C5F00AF2EC9 /* ChatListView.swift */; };
 		723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */; };
 		723ABD892AFFF1B800C260F1 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD882AFFF1B800C260F1 /* AuthenticationView.swift */; };
 		723ABD8B2AFFF1B900C260F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */; };
@@ -65,6 +68,9 @@
 		11F94EB62B2707A000AF2EC9 /* LoginButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonStyle.swift; sourceTree = "<group>"; };
 		11F94EBC2B2713B400AF2EC9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		11F94EBE2B2713FE00AF2EC9 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		11F94EC12B289B8300AF2EC9 /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
+		11F94EC52B289C5400AF2EC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		11F94EC82B289C5F00AF2EC9 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		723ABD832AFFF1B800C260F1 /* LMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerApp.swift; sourceTree = "<group>"; };
 		723ABD882AFFF1B800C260F1 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -128,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				11F94E9A2B26DEB700AF2EC9 /* Authentication */,
-				11F94EAF2B26F67600AF2EC9 /* MainTabView */,
 				11F94EAE2B26F66C00AF2EC9 /* Login */,
+				11F94EAF2B26F67600AF2EC9 /* MainTab */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,12 +166,13 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		11F94EAF2B26F67600AF2EC9 /* MainTabView */ = {
+		11F94EAF2B26F67600AF2EC9 /* MainTab */ = {
 			isa = PBXGroup;
 			children = (
 				11F94EB22B26F6A500AF2EC9 /* MainTabView.swift */,
+				11F94EC12B289B8300AF2EC9 /* MainTabType.swift */,
 			);
-			path = MainTabView;
+			path = MainTab;
 			sourceTree = "<group>";
 		};
 		11F94EBB2B27139000AF2EC9 /* Model */ = {
@@ -174,6 +181,22 @@
 				11F94EBC2B2713B400AF2EC9 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11F94EC32B289C3F00AF2EC9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				11F94EC52B289C5400AF2EC9 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		11F94EC42B289C4500AF2EC9 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				11F94EC82B289C5F00AF2EC9 /* ChatListView.swift */,
+			);
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 		723ABD7A2AFFF1B800C260F1 = {
@@ -208,6 +231,8 @@
 				11F94E932B26DD9700AF2EC9 /* General */,
 				11F94E962B26DE0300AF2EC9 /* Service */,
 				11F94E992B26DEAF00AF2EC9 /* View */,
+				11F94EC42B289C4500AF2EC9 /* ChatList */,
+				11F94EC32B289C3F00AF2EC9 /* Home */,
 				11F94EBB2B27139000AF2EC9 /* Model */,
 				72E4BEFA2B00B871007A1060 /* Extension */,
 				723ABDB02AFFF1D800C260F1 /* Resource */,
@@ -407,12 +432,15 @@
 				723ABD892AFFF1B800C260F1 /* AuthenticationView.swift in Sources */,
 				11F94EA82B26F18A00AF2EC9 /* AppDelegate.swift in Sources */,
 				72E4BEFC2B00B871007A1060 /* Color+Extension.swift in Sources */,
+				11F94EC22B289B8400AF2EC9 /* MainTabType.swift in Sources */,
 				11F94EB72B2707A000AF2EC9 /* LoginButtonStyle.swift in Sources */,
 				723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */,
 				11F94EB52B2706D500AF2EC9 /* LoginView.swift in Sources */,
 				11F94EAD2B26F34C00AF2EC9 /* AuthenticationService.swift in Sources */,
+				11F94EC62B289C5400AF2EC9 /* HomeView.swift in Sources */,
 				11F94EBF2B2713FE00AF2EC9 /* ServiceError.swift in Sources */,
 				11F94EB32B26F6A500AF2EC9 /* MainTabView.swift in Sources */,
+				11F94EC92B289C5F00AF2EC9 /* ChatListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
