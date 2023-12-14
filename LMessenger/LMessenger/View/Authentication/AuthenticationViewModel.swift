@@ -34,6 +34,7 @@ class AuthenticationViewModel: ObservableObject {
         switch action {
         case .googleLogin:
             container.services.authService.signInWithGoogle()
+            // TODO: - db 추가 작업
                 .sink { completion in
                     //TODO: 실패 시
                 } receiveValue: { [weak self] user in
