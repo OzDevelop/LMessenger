@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C9EF9A2B2F362400848E7B /* RandomNonceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9EF982B2F362400848E7B /* RandomNonceString.swift */; };
+		11C9EF9B2B2F362400848E7B /* SHA256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9EF992B2F362400848E7B /* SHA256.swift */; };
 		11F94E952B26DDA800AF2EC9 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E942B26DDA800AF2EC9 /* DIContainer.swift */; };
 		11F94E982B26DE1000AF2EC9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E972B26DE1000AF2EC9 /* Services.swift */; };
 		11F94E9C2B26DEE400AF2EC9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */; };
@@ -61,6 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11C9EF962B2F29F900848E7B /* LMessenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LMessenger.entitlements; sourceTree = "<group>"; };
+		11C9EF982B2F362400848E7B /* RandomNonceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNonceString.swift; sourceTree = "<group>"; };
+		11C9EF992B2F362400848E7B /* SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
 		11F94E942B26DDA800AF2EC9 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DIContainer.swift; path = LMessenger/Resource/DIContainer.swift; sourceTree = SOURCE_ROOT; };
 		11F94E972B26DE1000AF2EC9 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11C9EF972B2F35DD00848E7B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				11C9EF982B2F362400848E7B /* RandomNonceString.swift */,
+				11C9EF992B2F362400848E7B /* SHA256.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		11F94E932B26DD9700AF2EC9 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +163,8 @@
 		11F94E992B26DEAF00AF2EC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				11F94EC42B289C4500AF2EC9 /* ChatList */,
+				11F94EC32B289C3F00AF2EC9 /* Home */,
 				11F94E9A2B26DEB700AF2EC9 /* Authentication */,
 				11F94EAE2B26F66C00AF2EC9 /* Login */,
 				11F94EAF2B26F67600AF2EC9 /* MainTab */,
@@ -175,8 +191,8 @@
 		11F94EAE2B26F66C00AF2EC9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				11F94EB02B26F68F00AF2EC9 /* LoginIntroView.swift */,
 				11F94EB42B2706D500AF2EC9 /* LoginView.swift */,
+				11F94EB02B26F68F00AF2EC9 /* LoginIntroView.swift */,
 				11F94EB62B2707A000AF2EC9 /* LoginButtonStyle.swift */,
 			);
 			path = Login;
@@ -259,6 +275,8 @@
 		723ABD852AFFF1B800C260F1 /* LMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				11C9EF972B2F35DD00848E7B /* Util */,
+				11C9EF962B2F29F900848E7B /* LMessenger.entitlements */,
 				11F94EAB2B26F26300AF2EC9 /* Info.plist */,
 				11F94EA92B26F24D00AF2EC9 /* GoogleService-Info.plist */,
 				723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */,
@@ -268,8 +286,6 @@
 				11F94EBB2B27139000AF2EC9 /* Model */,
 				11F94E962B26DE0300AF2EC9 /* Service */,
 				11F94ECE2B2946A500AF2EC9 /* Repository */,
-				11F94EC32B289C3F00AF2EC9 /* Home */,
-				11F94EC42B289C4500AF2EC9 /* ChatList */,
 				72E4BEFA2B00B871007A1060 /* Extension */,
 				723ABDB02AFFF1D800C260F1 /* Resource */,
 				723ABD8C2AFFF1B900C260F1 /* Preview Content */,
@@ -466,6 +482,7 @@
 				11F94ED72B2A90D200AF2EC9 /* DBError.swift in Sources */,
 				11F94EB12B26F68F00AF2EC9 /* LoginIntroView.swift in Sources */,
 				11F94E9C2B26DEE400AF2EC9 /* AuthenticationViewModel.swift in Sources */,
+				11C9EF9A2B2F362400848E7B /* RandomNonceString.swift in Sources */,
 				11F94E982B26DE1000AF2EC9 /* Services.swift in Sources */,
 				11F94E952B26DDA800AF2EC9 /* DIContainer.swift in Sources */,
 				723ABD892AFFF1B800C260F1 /* AuthenticationView.swift in Sources */,
@@ -476,6 +493,7 @@
 				11F94EB72B2707A000AF2EC9 /* LoginButtonStyle.swift in Sources */,
 				723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */,
 				11F94EB52B2706D500AF2EC9 /* LoginView.swift in Sources */,
+				11C9EF9B2B2F362400848E7B /* SHA256.swift in Sources */,
 				11F94EAD2B26F34C00AF2EC9 /* AuthenticationService.swift in Sources */,
 				11F94EC62B289C5400AF2EC9 /* HomeView.swift in Sources */,
 				11F94EBF2B2713FE00AF2EC9 /* ServiceError.swift in Sources */,
@@ -639,6 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LMessenger/LMessenger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LMessenger/Preview Content\"";
@@ -669,6 +688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LMessenger/LMessenger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LMessenger/Preview Content\"";
