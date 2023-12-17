@@ -20,13 +20,24 @@ enum AuthenticationError: Error {
 
 // combine 관련 내용 학습해야 할듯
 protocol AuthenticationServiceType {
+    func checkAuthenticationState() -> String?
     func signInWithGoogle() ->  AnyPublisher<User, ServiceError>
     func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) -> String
     func handleSignInWithAppleCompletion(_ authorization: ASAuthorization, none: String) -> AnyPublisher<User, ServiceError>
+    func logout() -> AnyPublisher<Void, ServiceError>
 }
 
 // ????????
 class AuthenticationService: AuthenticationServiceType {
+    // 파베에 유저가 등록되어 있는지 확인 -> 자동로그인 위해서
+    func checkAuthenticationState() -> String? {
+        if let user = Auth.auth().currentUser {
+            return user.uid
+        } else {
+            return nil
+        }
+    }
+    
     func signInWithGoogle() ->  AnyPublisher<User, ServiceError> {
         Future { [weak self] promise in
             self?.signInWithGoogle { result in
@@ -57,6 +68,17 @@ class AuthenticationService: AuthenticationServiceType {
                 case let .failure(error):
                     promise(.failure(.error(error)))
                 }
+            }
+        }.eraseToAnyPublisher()
+    }
+    
+    func logout() -> AnyPublisher<Void, ServiceError> {
+        Future { promise in
+            do {
+                try Auth.auth().signOut()
+                promise(.success(()))
+            } catch {
+                promise(.failure(.error(error)))
             }
         }.eraseToAnyPublisher()
     }
@@ -158,6 +180,10 @@ extension AuthenticationService {
 
 
 class StubAuthenticationService: AuthenticationServiceType {
+    func checkAuthenticationState() -> String? {
+         return nil
+    }
+    
     func signInWithGoogle() ->  AnyPublisher<User, ServiceError> {
         Empty().eraseToAnyPublisher()
     }
@@ -165,6 +191,10 @@ class StubAuthenticationService: AuthenticationServiceType {
         return ""
     }
     func handleSignInWithAppleCompletion(_ authorization: ASAuthorization, none: String) -> AnyPublisher<User, ServiceError> {
+        Empty().eraseToAnyPublisher()
+    }
+    
+    func logout() -> AnyPublisher<Void, ServiceError> {
         Empty().eraseToAnyPublisher()
     }
 }

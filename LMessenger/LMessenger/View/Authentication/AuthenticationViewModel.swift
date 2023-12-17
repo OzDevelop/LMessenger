@@ -17,14 +17,16 @@ enum AuthenticationState {
 class AuthenticationViewModel: ObservableObject {
     
     enum Action {
+        case checkAuthenticationState
         case googleLogin
         case appleLogin(ASAuthorizationAppleIDRequest)
         case appleLoginCompletion(Result<ASAuthorization, Error>)
+        case logout
     }
     
     @Published var authenticationState : AuthenticationState = .unauthenticated
     @Published var isLoading = false
-    
+    // 이거 왜만들어 놨드라?
     var userId: String?
     
     private var currentNonce: String?
@@ -35,8 +37,16 @@ class AuthenticationViewModel: ObservableObject {
         self.container = container
     }
     
+    //이런식으로 함수 짜는거 다시 보기
     func send(action: Action) {
         switch action {
+            // 자동 로그인
+        case .checkAuthenticationState:
+            if let userId = container.services.authService.checkAuthenticationState() {
+                self.userId = userId
+                authenticationState = .authenticated
+            }
+            
         case .googleLogin:
             isLoading = true
             container.services.authService.signInWithGoogle()
@@ -49,6 +59,7 @@ class AuthenticationViewModel: ObservableObject {
                 } receiveValue: { [weak self] user in
                     self?.isLoading = false
                     self?.userId = user.id
+                    self?.authenticationState = .authenticated
                 }.store(in: &subscriptions)
 
         case let .appleLogin(request):
@@ -68,11 +79,22 @@ class AuthenticationViewModel: ObservableObject {
                     } receiveValue: { [weak self] user in
                         self?.isLoading = false
                         self?.userId = user.id
+                        self?.authenticationState = .authenticated
                     }.store(in: &subscriptions)
             } else if case let .failure(error) = result {
                 isLoading = false
                 print(error.localizedDescription)
             }
+            
+        case .logout:
+            container.services.authService.logout()
+                .sink { completion in
+                    <#code#>
+                } receiveValue: { [weak self] _ in
+                    self?.authenticationState = .unauthenticated
+                    self?.userId = nil
+                }.store(in: &subscriptions)
+
         }
     }
 }
