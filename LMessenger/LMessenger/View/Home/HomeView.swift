@@ -13,6 +13,15 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             content
+                .fullScreenCover(item: $viewModel.modalDestination) {
+                    switch $0 {
+                    case .myProfile:
+                        MyProfileView()
+                    case let .otherProfile(userid):
+                        OtherProfileView()
+                         
+                    }
+                }
         }
     }
     
@@ -57,25 +66,30 @@ struct HomeView: View {
                     .foregroundStyle(Color.bkText)
                 Spacer()
             }
-            .padding(.horizontal)
+            .padding(.horizontal, 30)
             
             if viewModel.users.isEmpty {
                 Spacer(minLength: 89)
                 emptyView
             } else {
-                ForEach(viewModel.users, id: \.id) { user in
-                    HStack(spacing: 8) {
-                        Image("person")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .clipShape(Circle())
-                        Text("\(user.name)")
-                            .font(.system(size: 12))
-                            .foregroundStyle(Color.bkText)
-                        Spacer()
+                LazyVStack {
+                    ForEach(viewModel.users, id: \.id) { user in
+                        Button {
+                            viewModel.send(action: .presentOtherProfileView(user.id))
+                        } label: {
+                            HStack(spacing: 8) {
+                                Image("person")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
+                                Text("\(user.name)")
+                                    .font(.system(size: 12))
+                                    .foregroundStyle(Color.bkText)
+                                Spacer()
+                            }
+                            .padding(.horizontal, 30)
+                        }
                     }
-                    .padding(.horizontal, 30)
-                    
                 }
             }
             
@@ -100,6 +114,9 @@ struct HomeView: View {
                 .clipShape(Circle())
         }
         .padding(.horizontal, 30)
+        .onTapGesture {
+            viewModel.send(action: .presentMyProfileView)
+        }
     }
     
     var searchButton: some View {

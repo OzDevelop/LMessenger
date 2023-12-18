@@ -55,10 +55,10 @@ class StubUserService: UserServiceType {
     }
     
     func getUser(userId: String) -> AnyPublisher<User, ServiceError> {
-        Empty().eraseToAnyPublisher()
+        Just(.stub1).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
     }
     
     func loadUsers(id: String) -> AnyPublisher<[User], ServiceError> {
-        Empty().eraseToAnyPublisher()
+        Just([.stub1, .stub2]).setFailureType(to: ServiceError.self).eraseToAnyPublisher()
     }
 }

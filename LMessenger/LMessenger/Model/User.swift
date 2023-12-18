@@ -31,6 +31,6 @@ extension User {
         .init(id: "User1_id", name: "홍길동")
     }
     static var stub2: User {
-        .init(id: "User1_id", name: "홍길동")
+        .init(id: "User2_id", name: "둘리")
     }
 }
