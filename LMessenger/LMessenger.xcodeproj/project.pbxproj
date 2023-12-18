@@ -275,7 +275,6 @@
 		723ABD852AFFF1B800C260F1 /* LMessenger */ = {
 			isa = PBXGroup;
 			children = (
-				11C9EF972B2F35DD00848E7B /* Util */,
 				11C9EF962B2F29F900848E7B /* LMessenger.entitlements */,
 				11F94EAB2B26F26300AF2EC9 /* Info.plist */,
 				11F94EA92B26F24D00AF2EC9 /* GoogleService-Info.plist */,
@@ -286,6 +285,7 @@
 				11F94EBB2B27139000AF2EC9 /* Model */,
 				11F94E962B26DE0300AF2EC9 /* Service */,
 				11F94ECE2B2946A500AF2EC9 /* Repository */,
+				11C9EF972B2F35DD00848E7B /* Util */,
 				72E4BEFA2B00B871007A1060 /* Extension */,
 				723ABDB02AFFF1D800C260F1 /* Resource */,
 				723ABD8C2AFFF1B900C260F1 /* Preview Content */,

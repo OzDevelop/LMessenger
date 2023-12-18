@@ -26,7 +26,7 @@ class AuthenticationViewModel: ObservableObject {
     
     @Published var authenticationState : AuthenticationState = .unauthenticated
     @Published var isLoading = false
-    // 이거 왜만들어 놨드라?
+    
     var userId: String?
     
     private var currentNonce: String?
@@ -50,7 +50,10 @@ class AuthenticationViewModel: ObservableObject {
         case .googleLogin:
             isLoading = true
             container.services.authService.signInWithGoogle()
-            // TODO: - db 추가 작업
+            //MARK: - db 추가 작업
+                .flatMap { user in
+                    self.container.services.userService.addUser(user)
+                }
                 .sink { [weak self] completion in
                     if case .failure = completion {
                         self?.isLoading = false
@@ -71,6 +74,9 @@ class AuthenticationViewModel: ObservableObject {
                 guard let nonce = currentNonce else { return }
                 
                 container.services.authService.handleSignInWithAppleCompletion(authorization, none: nonce)
+                    .flatMap { user in
+                        self.container.services.userService.addUser(user)
+                    }
                     .sink { completion in
                         if case .failure = completion {
                             self.isLoading = false
@@ -89,7 +95,7 @@ class AuthenticationViewModel: ObservableObject {
         case .logout:
             container.services.authService.logout()
                 .sink { completion in
-                    <#code#>
+                    
                 } receiveValue: { [weak self] _ in
                     self?.authenticationState = .unauthenticated
                     self?.userId = nil
