@@ -16,6 +16,7 @@
 		11C9EFA82B3006AA00848E7B /* HomeModalDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9EFA72B3006AA00848E7B /* HomeModalDestination.swift */; };
 		11C9EFAB2B30078200848E7B /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9EFAA2B30078200848E7B /* MyProfileView.swift */; };
 		11C9EFAD2B30078A00848E7B /* OtherProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9EFAC2B30078A00848E7B /* OtherProfileView.swift */; };
+		11C9EFE62B30481200848E7B /* ContactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9EFE52B30481200848E7B /* ContactService.swift */; };
 		11F94E952B26DDA800AF2EC9 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E942B26DDA800AF2EC9 /* DIContainer.swift */; };
 		11F94E982B26DE1000AF2EC9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E972B26DE1000AF2EC9 /* Services.swift */; };
 		11F94E9C2B26DEE400AF2EC9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */; };
@@ -80,6 +81,7 @@
 		11C9EFA72B3006AA00848E7B /* HomeModalDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModalDestination.swift; sourceTree = "<group>"; };
 		11C9EFAA2B30078200848E7B /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		11C9EFAC2B30078A00848E7B /* OtherProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileView.swift; sourceTree = "<group>"; };
+		11C9EFE52B30481200848E7B /* ContactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactService.swift; sourceTree = "<group>"; };
 		11F94E942B26DDA800AF2EC9 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DIContainer.swift; path = LMessenger/Resource/DIContainer.swift; sourceTree = SOURCE_ROOT; };
 		11F94E972B26DE1000AF2EC9 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				11F94EAC2B26F34C00AF2EC9 /* AuthenticationService.swift */,
 				11F94EBE2B2713FE00AF2EC9 /* ServiceError.swift */,
 				11F94ED12B29474700AF2EC9 /* UserService.swift */,
+				11C9EFE52B30481200848E7B /* ContactService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				11C9EFA62B30055700848E7B /* ErrorView.swift in Sources */,
 				11C9EF9D2B30036300848E7B /* Phase.swift in Sources */,
 				11C9EF9A2B2F362400848E7B /* RandomNonceString.swift in Sources */,
+				11C9EFE62B30481200848E7B /* ContactService.swift in Sources */,
 				11F94E982B26DE1000AF2EC9 /* Services.swift in Sources */,
 				11C9EFA22B3004BD00848E7B /* PlaceholderView.swift in Sources */,
 				11C9EFAD2B30078A00848E7B /* OtherProfileView.swift in Sources */,
@@ -709,10 +713,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LMessenger/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "친구 목록을 가져옵니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -740,10 +744,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LMessenger/Info.plist;
+				INFOPLIST_KEY_NSContactsUsageDescription = "친구 목록을 가져옵니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
