@@ -45,6 +45,9 @@ struct MyProfileView: View {
                     }
                 }
             }
+            .task { //task modifier는 onappear가 불리기 직전에 실행됨.
+                await viewModel.getUser()
+            }
         }
     }
     

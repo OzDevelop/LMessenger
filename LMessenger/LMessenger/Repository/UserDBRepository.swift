@@ -11,7 +11,8 @@ import FirebaseDatabase
 
 protocol UserDBRepositoryType {
     func addUser(_ object: UserObject) -> AnyPublisher<Void, DBError>
-    func getUser(userId: String) -> AnyPublisher<UserObject, DBError>
+    func getUser(userId: String) -> AnyPublisher<UserObject, DBError> // 이걸 컴바인으로도 해보고(지금), async await으로도 해봄(myprofile 가져올때)
+    func getUser(userId: String) async throws -> UserObject
     func loadUsers() -> AnyPublisher<[UserObject], DBError>
     func addUserAfterContact(users: [UserObject]) -> AnyPublisher<Void, DBError>
     
@@ -67,6 +68,19 @@ class UserDBRepository: UserDBRepositoryType {
             }
         }
         .eraseToAnyPublisher()
+    }
+    
+    func getUser(userId: String) async throws -> UserObject {
+        //firebase는 async를 지원하므로 그냥 쓰면됨
+        guard let value = try await self.db.child(DBKey.Users).child(userId).getData().value else {
+            throw DBError.emptyValue
+        }
+        
+        let data = try JSONSerialization.data(withJSONObject: value) // 딕셔너리를 데이터화 하는것
+        let userObject = try JSONDecoder().decode(UserObject.self, from: data) // UserObject에 맞게 디코딩
+        
+        return userObject
+        
     }
     
     func loadUsers() -> AnyPublisher<[UserObject], DBError> {
