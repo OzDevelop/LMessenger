@@ -17,12 +17,13 @@ class HomeViewModel: ObservableObject {
         case presentOtherProfileView(String)
     }
     
-    @Published var myUser: User?
+    @Published var myUser: User? // 자신의 User 정보
     @Published var users: [User] = []
     @Published var phase: Phase = .notRequested
     @Published var modalDestination: HomeModalDestination?
     
-    private var userId: String
+    var userId: String
+    
     private var container: DIContainer
     private var subscription = Set<AnyCancellable>()
     
