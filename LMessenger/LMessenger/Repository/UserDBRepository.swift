@@ -13,7 +13,8 @@ protocol UserDBRepositoryType {
     func addUser(_ object: UserObject) -> AnyPublisher<Void, DBError>
     func getUser(userId: String) -> AnyPublisher<UserObject, DBError> // 이걸 컴바인으로도 해보고(지금), async await으로도 해봄(myprofile 가져올때)
     func getUser(userId: String) async throws -> UserObject
-    func loadUsers() -> AnyPublisher<[UserObject], DBError>
+    func updateUser(userId: String, key: String, value: Any) async throws
+     func loadUsers() -> AnyPublisher<[UserObject], DBError>
     func addUserAfterContact(users: [UserObject]) -> AnyPublisher<Void, DBError>
     
 }
@@ -80,6 +81,11 @@ class UserDBRepository: UserDBRepositoryType {
         let userObject = try JSONDecoder().decode(UserObject.self, from: data) // UserObject에 맞게 디코딩
         
         return userObject
+        
+    }
+    
+    func updateUser(userId: String, key: String, value: Any) async throws {
+        try await self.db.child(DBKey.Users).child(userId).child(key).setValue(value)
         
     }
     

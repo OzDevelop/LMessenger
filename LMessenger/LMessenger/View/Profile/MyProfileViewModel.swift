@@ -11,6 +11,7 @@ import Foundation
 class MyProfileViewModel: ObservableObject {
     
     @Published var userInfo: User? // 자신에 대한 user 정보
+    @Published var isPresentedDescEditView: Bool = false
     
     private let userId: String
     private var container: DIContainer
@@ -23,6 +24,15 @@ class MyProfileViewModel: ObservableObject {
     func getUser() async {
         if let user = try? await container.services.userService.getUser(userId: userId) {
             userInfo = user
+        }
+    }
+    
+    func updateDescription(_ description: String) async {
+        do {
+            try await container.services.userService.updateDescription(userId: userId, description: description)
+            userInfo?.description = description
+        } catch {
+            
         }
     }
 }
