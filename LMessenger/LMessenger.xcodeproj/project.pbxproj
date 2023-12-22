@@ -27,6 +27,8 @@
 		11C9F0252B34775300848E7B /* ImageCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9F0242B34775300848E7B /* ImageCacheService.swift */; };
 		11C9F0272B3477DD00848E7B /* MemoryStroage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9F0262B3477DD00848E7B /* MemoryStroage.swift */; };
 		11C9F0292B347A3200848E7B /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9F0282B347A3200848E7B /* DiskStorage.swift */; };
+		11C9F02B2B354F3200848E7B /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9F02A2B354F3200848E7B /* URLImage.swift */; };
+		11C9F02E2B35509600848E7B /* URLImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C9F02D2B35509600848E7B /* URLImageViewModel.swift */; };
 		11F94E952B26DDA800AF2EC9 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E942B26DDA800AF2EC9 /* DIContainer.swift */; };
 		11F94E982B26DE1000AF2EC9 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E972B26DE1000AF2EC9 /* Services.swift */; };
 		11F94E9C2B26DEE400AF2EC9 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */; };
@@ -100,6 +102,8 @@
 		11C9F0242B34775300848E7B /* ImageCacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheService.swift; sourceTree = "<group>"; };
 		11C9F0262B3477DD00848E7B /* MemoryStroage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStroage.swift; sourceTree = "<group>"; };
 		11C9F0282B347A3200848E7B /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
+		11C9F02A2B354F3200848E7B /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		11C9F02D2B35509600848E7B /* URLImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageViewModel.swift; sourceTree = "<group>"; };
 		11F94E942B26DDA800AF2EC9 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DIContainer.swift; path = LMessenger/Resource/DIContainer.swift; sourceTree = SOURCE_ROOT; };
 		11F94E972B26DE1000AF2EC9 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		11F94E9B2B26DEE400AF2EC9 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 		11C9EF9E2B3004A200848E7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				11C9F02C2B35507400848E7B /* URLImage */,
 				11C9EFA12B3004BD00848E7B /* PlaceholderView.swift */,
 				11C9EFA32B3004E500848E7B /* LoadingView.swift */,
 				11C9EFA52B30055700848E7B /* ErrorView.swift */,
@@ -215,6 +220,15 @@
 				11C9F0282B347A3200848E7B /* DiskStorage.swift */,
 			);
 			path = ImageCache;
+			sourceTree = "<group>";
+		};
+		11C9F02C2B35507400848E7B /* URLImage */ = {
+			isa = PBXGroup;
+			children = (
+				11C9F02A2B354F3200848E7B /* URLImage.swift */,
+				11C9F02D2B35509600848E7B /* URLImageViewModel.swift */,
+			);
+			path = URLImage;
 			sourceTree = "<group>";
 		};
 		11F94E932B26DD9700AF2EC9 /* General */ = {
@@ -570,6 +584,7 @@
 				11F94EB12B26F68F00AF2EC9 /* LoginIntroView.swift in Sources */,
 				11F94E9C2B26DEE400AF2EC9 /* AuthenticationViewModel.swift in Sources */,
 				11C9EFA62B30055700848E7B /* ErrorView.swift in Sources */,
+				11C9F02B2B354F3200848E7B /* URLImage.swift in Sources */,
 				11C9EF9D2B30036300848E7B /* Phase.swift in Sources */,
 				11C9F0252B34775300848E7B /* ImageCacheService.swift in Sources */,
 				11C9EF9A2B2F362400848E7B /* RandomNonceString.swift in Sources */,
@@ -585,6 +600,7 @@
 				11F94EA82B26F18A00AF2EC9 /* AppDelegate.swift in Sources */,
 				72E4BEFC2B00B871007A1060 /* Color+Extension.swift in Sources */,
 				11F94ED92B2A948C00AF2EC9 /* Constant.swift in Sources */,
+				11C9F02E2B35509600848E7B /* URLImageViewModel.swift in Sources */,
 				11F94EC22B289B8400AF2EC9 /* MainTabType.swift in Sources */,
 				11F94EB72B2707A000AF2EC9 /* LoginButtonStyle.swift in Sources */,
 				723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */,
